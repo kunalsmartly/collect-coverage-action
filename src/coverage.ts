@@ -159,7 +159,7 @@ async function publishCoverage(
     if (Number.isFinite(pct)) {
       if (opts.token) {
         const data = {
-          project: opts.project,
+          project: 'sip-condenser-api', // opts.project,
           flavor: flavor,
           value: pct,
           tag: opts.tag,
