@@ -4,6 +4,7 @@ import { default as libCoverage } from 'istanbul-lib-coverage';
 import lcovParser, { SectionSummary } from '@friedemannsommer/lcov-parser';
 import { XMLParser } from 'fast-xml-parser';
 import { promisify } from 'util';
+import log from 'async/log';
 
 type Opts = {
   /**
@@ -165,7 +166,7 @@ async function publishCoverage(
           covered_items: coveredItems,
           total_items: totalItems
         };
-        console.log("Request data is: ",data);
+        log("Request data is: ",data);
         if (opts.dryRun) {
           console.log(data);
           continue;
