@@ -7,6 +7,9 @@ inputs:
   authorization-token:
     description: bearer token for authorization
     required: true
+  project-name:
+    description: user-specified string, defaults to "owner/repository"
+    required: false
   url:
     description: url to send the data to
     required: true
