@@ -15,7 +15,7 @@ async function run() {
     coverage: coverageFile,
     token: core.getInput(tokenArgument),
     tag: pr != null ? `pr-${pr}` : 'main',
-    project: projectName != null ? projectName : github.context.repo.repo,
+    project: projectName, // != null ? projectName : github.context.repo.repo,
     url: core.getInput(urlArgument),
     coverageFormat: (core.getInput('coverage-format') ?? 'istanbul') as 'summary' | 'istanbul',
     dryRun: core.getInput('dry-run') === 'true'
