@@ -5,7 +5,7 @@ import * as coverage from './coverage';
 const tokenArgument = 'authorization-token';
 const coverageFileArgument = 'coverage-file';
 const urlArgument = 'url';
-const projectNameArgument = 'project-name'
+const projectNameArgument = 'project-name';
 
 async function run() {
   const pr = github.context.payload.pull_request?.number;
