@@ -4,7 +4,6 @@ import { default as libCoverage } from 'istanbul-lib-coverage';
 import lcovParser, { SectionSummary } from '@friedemannsommer/lcov-parser';
 import { XMLParser } from 'fast-xml-parser';
 import { promisify } from 'util';
-import log from 'async/log';
 
 type Opts = {
   /**
@@ -159,14 +158,13 @@ async function publishCoverage(
     if (Number.isFinite(pct)) {
       if (opts.token) {
         const data = {
-          project: 'sip-condenser-api', // opts.project,
+          project: opts.project,
           flavor: flavor,
           value: pct,
           tag: opts.tag,
           covered_items: coveredItems,
           total_items: totalItems
         };
-        log("Request data is: ",data);
         if (opts.dryRun) {
           console.log(data);
           continue;

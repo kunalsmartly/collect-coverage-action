@@ -20,7 +20,8 @@
     "@actions/github": "^6.0.0",
     "@friedemannsommer/lcov-parser": "^3.1.1",
     "fast-xml-parser": "^4.4.1",
-    "istanbul-lib-coverage": "^3.2.2"
+    "istanbul-lib-coverage": "^3.2.2",
+    "ncc": "^0.3.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
